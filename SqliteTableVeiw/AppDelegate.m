@@ -6,16 +6,19 @@
 //
 
 #import "AppDelegate.h"
+#import "MainWindowController.h"
 
 @interface AppDelegate ()
-
-@property (strong) IBOutlet NSWindow *window;
+@property NSMutableArray *windows;
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    self.windows = [[NSMutableArray alloc] init];
+    MainWindowController *main = [[MainWindowController alloc] initWithWindowNibName:[MainWindowController className]];
+    [self.windows addObject:main];
+    [main showWindow:nil];
 }
 
 

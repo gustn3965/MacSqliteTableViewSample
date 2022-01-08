@@ -7,20 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55FDEC4D94FF08AC52E653C6 /* Pods_SqliteTableVeiw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D664854BDA6F2A8DBA4AC1 /* Pods_SqliteTableVeiw.framework */; };
 		DBF4D9302789AECC00EE891B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF4D92F2789AECC00EE891B /* AppDelegate.m */; };
 		DBF4D9322789AECC00EE891B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF4D9312789AECC00EE891B /* Assets.xcassets */; };
-		DBF4D9352789AECC00EE891B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF4D9332789AECC00EE891B /* MainMenu.xib */; };
 		DBF4D9372789AECC00EE891B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF4D9362789AECC00EE891B /* main.m */; };
+		DBF4D9432789BD6000EE891B /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF4D9412789BD6000EE891B /* MainWindowController.m */; };
+		DBF4D9442789BD6000EE891B /* MainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF4D9422789BD6000EE891B /* MainWindowController.xib */; };
+		DBF4D9472789BEE400EE891B /* MenuBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF4D9462789BEE400EE891B /* MenuBar.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C5662D703432A605DFBD8B1 /* Pods-SqliteTableVeiw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SqliteTableVeiw.debug.xcconfig"; path = "Target Support Files/Pods-SqliteTableVeiw/Pods-SqliteTableVeiw.debug.xcconfig"; sourceTree = "<group>"; };
+		69FD6B18CD993EAF7E5E9B10 /* Pods-SqliteTableVeiw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SqliteTableVeiw.release.xcconfig"; path = "Target Support Files/Pods-SqliteTableVeiw/Pods-SqliteTableVeiw.release.xcconfig"; sourceTree = "<group>"; };
+		96D664854BDA6F2A8DBA4AC1 /* Pods_SqliteTableVeiw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SqliteTableVeiw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF4D92B2789AECC00EE891B /* SqliteTableVeiw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SqliteTableVeiw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF4D92E2789AECC00EE891B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DBF4D92F2789AECC00EE891B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		DBF4D9312789AECC00EE891B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DBF4D9342789AECC00EE891B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		DBF4D9362789AECC00EE891B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBF4D9382789AECC00EE891B /* SqliteTableVeiw.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SqliteTableVeiw.entitlements; sourceTree = "<group>"; };
+		DBF4D9402789BD6000EE891B /* MainWindowController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		DBF4D9412789BD6000EE891B /* MainWindowController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
+		DBF4D9422789BD6000EE891B /* MainWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindowController.xib; sourceTree = "<group>"; };
+		DBF4D9462789BEE400EE891B /* MenuBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuBar.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55FDEC4D94FF08AC52E653C6 /* Pods_SqliteTableVeiw.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07A30108A48D47A8015C8230 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96D664854BDA6F2A8DBA4AC1 /* Pods_SqliteTableVeiw.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A6D68AEC8D93BE564791532 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C5662D703432A605DFBD8B1 /* Pods-SqliteTableVeiw.debug.xcconfig */,
+				69FD6B18CD993EAF7E5E9B10 /* Pods-SqliteTableVeiw.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DBF4D9222789AECC00EE891B = {
 			isa = PBXGroup;
 			children = (
 				DBF4D92D2789AECC00EE891B /* SqliteTableVeiw */,
 				DBF4D92C2789AECC00EE891B /* Products */,
+				8A6D68AEC8D93BE564791532 /* Pods */,
+				07A30108A48D47A8015C8230 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,14 +82,41 @@
 		DBF4D92D2789AECC00EE891B /* SqliteTableVeiw */ = {
 			isa = PBXGroup;
 			children = (
+				DBF4D9452789BEB100EE891B /* MenuBarMenu */,
+				DBF4D93F2789BD5000EE891B /* ViewController */,
+				DBF4D93E2789BD4D00EE891B /* Window */,
 				DBF4D92E2789AECC00EE891B /* AppDelegate.h */,
 				DBF4D92F2789AECC00EE891B /* AppDelegate.m */,
 				DBF4D9312789AECC00EE891B /* Assets.xcassets */,
-				DBF4D9332789AECC00EE891B /* MainMenu.xib */,
 				DBF4D9362789AECC00EE891B /* main.m */,
 				DBF4D9382789AECC00EE891B /* SqliteTableVeiw.entitlements */,
 			);
 			path = SqliteTableVeiw;
+			sourceTree = "<group>";
+		};
+		DBF4D93E2789BD4D00EE891B /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				DBF4D9402789BD6000EE891B /* MainWindowController.h */,
+				DBF4D9412789BD6000EE891B /* MainWindowController.m */,
+				DBF4D9422789BD6000EE891B /* MainWindowController.xib */,
+			);
+			path = Window;
+			sourceTree = "<group>";
+		};
+		DBF4D93F2789BD5000EE891B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		DBF4D9452789BEB100EE891B /* MenuBarMenu */ = {
+			isa = PBXGroup;
+			children = (
+				DBF4D9462789BEE400EE891B /* MenuBar.xib */,
+			);
+			path = MenuBarMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -70,9 +126,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DBF4D93B2789AECC00EE891B /* Build configuration list for PBXNativeTarget "SqliteTableVeiw" */;
 			buildPhases = (
+				8EC18FF1605D9C6F03947E69 /* [CP] Check Pods Manifest.lock */,
 				DBF4D9272789AECC00EE891B /* Sources */,
 				DBF4D9282789AECC00EE891B /* Frameworks */,
 				DBF4D9292789AECC00EE891B /* Resources */,
+				93280ED9B8EE592504C04478 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -121,34 +179,67 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBF4D9322789AECC00EE891B /* Assets.xcassets in Resources */,
-				DBF4D9352789AECC00EE891B /* MainMenu.xib in Resources */,
+				DBF4D9442789BD6000EE891B /* MainWindowController.xib in Resources */,
+				DBF4D9472789BEE400EE891B /* MenuBar.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8EC18FF1605D9C6F03947E69 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SqliteTableVeiw-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93280ED9B8EE592504C04478 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SqliteTableVeiw/Pods-SqliteTableVeiw-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SqliteTableVeiw/Pods-SqliteTableVeiw-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SqliteTableVeiw/Pods-SqliteTableVeiw-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		DBF4D9272789AECC00EE891B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBF4D9432789BD6000EE891B /* MainWindowController.m in Sources */,
 				DBF4D9372789AECC00EE891B /* main.m in Sources */,
 				DBF4D9302789AECC00EE891B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		DBF4D9332789AECC00EE891B /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DBF4D9342789AECC00EE891B /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		DBF4D9392789AECC00EE891B /* Debug */ = {
@@ -202,7 +293,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -255,7 +346,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -264,6 +355,7 @@
 		};
 		DBF4D93C2789AECC00EE891B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C5662D703432A605DFBD8B1 /* Pods-SqliteTableVeiw.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -273,7 +365,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSMainNibFile = MenuBar;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -288,6 +380,7 @@
 		};
 		DBF4D93D2789AECC00EE891B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69FD6B18CD993EAF7E5E9B10 /* Pods-SqliteTableVeiw.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -297,7 +390,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSMainNibFile = MenuBar;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
