@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ChatRoomTableViewController : NSViewController <NSTableViewDataSource, NSTableViewDelegate>
 
-
+-(void) fetchChatRoom ;
 
 
 @end

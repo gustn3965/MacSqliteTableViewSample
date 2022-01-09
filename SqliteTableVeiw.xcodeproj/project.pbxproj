@@ -11,6 +11,8 @@
 		DB33EF6B278AA80500E04BCF /* ChatRoomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33EF69278AA80500E04BCF /* ChatRoomTableViewController.m */; };
 		DB33EF6C278AA80500E04BCF /* ChatRoomTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB33EF6A278AA80500E04BCF /* ChatRoomTableViewController.xib */; };
 		DB33EF70278AA86E00E04BCF /* ChatRoomTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33EF6F278AA86E00E04BCF /* ChatRoomTableCellView.m */; };
+		DB33EF76278AB6DF00E04BCF /* ChatRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33EF75278AB6DF00E04BCF /* ChatRoom.m */; };
+		DB33EF79278AB99200E04BCF /* SQLDB.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33EF78278AB99200E04BCF /* SQLDB.m */; };
 		DBF4D9302789AECC00EE891B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF4D92F2789AECC00EE891B /* AppDelegate.m */; };
 		DBF4D9322789AECC00EE891B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF4D9312789AECC00EE891B /* Assets.xcassets */; };
 		DBF4D9372789AECC00EE891B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF4D9362789AECC00EE891B /* main.m */; };
@@ -28,6 +30,10 @@
 		DB33EF6A278AA80500E04BCF /* ChatRoomTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomTableViewController.xib; sourceTree = "<group>"; };
 		DB33EF6E278AA86E00E04BCF /* ChatRoomTableCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatRoomTableCellView.h; sourceTree = "<group>"; };
 		DB33EF6F278AA86E00E04BCF /* ChatRoomTableCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatRoomTableCellView.m; sourceTree = "<group>"; };
+		DB33EF74278AB6DF00E04BCF /* ChatRoom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatRoom.h; sourceTree = "<group>"; };
+		DB33EF75278AB6DF00E04BCF /* ChatRoom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatRoom.m; sourceTree = "<group>"; };
+		DB33EF77278AB99200E04BCF /* SQLDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SQLDB.h; sourceTree = "<group>"; };
+		DB33EF78278AB99200E04BCF /* SQLDB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SQLDB.m; sourceTree = "<group>"; };
 		DBF4D92B2789AECC00EE891B /* SqliteTableVeiw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SqliteTableVeiw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF4D92E2789AECC00EE891B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DBF4D92F2789AECC00EE891B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,6 +84,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		DB33EF71278AB6B500E04BCF /* Sqlite */ = {
+			isa = PBXGroup;
+			children = (
+				DB33EF74278AB6DF00E04BCF /* ChatRoom.h */,
+				DB33EF75278AB6DF00E04BCF /* ChatRoom.m */,
+				DB33EF77278AB99200E04BCF /* SQLDB.h */,
+				DB33EF78278AB99200E04BCF /* SQLDB.m */,
+			);
+			path = Sqlite;
+			sourceTree = "<group>";
+		};
 		DBF4D9222789AECC00EE891B = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +116,7 @@
 		DBF4D92D2789AECC00EE891B /* SqliteTableVeiw */ = {
 			isa = PBXGroup;
 			children = (
+				DB33EF71278AB6B500E04BCF /* Sqlite */,
 				DB33EF6D278AA85D00E04BCF /* View */,
 				DBF4D9452789BEB100EE891B /* MenuBarMenu */,
 				DBF4D93F2789BD5000EE891B /* ViewController */,
@@ -256,9 +274,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB33EF6B278AA80500E04BCF /* ChatRoomTableViewController.m in Sources */,
+				DB33EF79278AB99200E04BCF /* SQLDB.m in Sources */,
 				DB33EF70278AA86E00E04BCF /* ChatRoomTableCellView.m in Sources */,
 				DBF4D9432789BD6000EE891B /* MainWindowController.m in Sources */,
 				DBF4D9372789AECC00EE891B /* main.m in Sources */,
+				DB33EF76278AB6DF00E04BCF /* ChatRoom.m in Sources */,
 				DBF4D9302789AECC00EE891B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,9 +7,13 @@
 
 #import "MainWindowController.h"
 #import "ChatRoomTableViewController.h"
+#import "SQLDB.h"
 
 @interface MainWindowController ()
-@property id currentViewController;
+@property NSViewController * currentViewController;
+@property (weak) IBOutlet NSView *leftView;
+@property (weak) IBOutlet NSView *rightView;
+@property SQLDB *sqldb;
 @end
 
 @implementation MainWindowController
@@ -18,20 +22,64 @@
     [super windowDidLoad];
     [self setChatRoomViewController];
 
+    self.sqldb = [SQLDB shared];
+    [self.sqldb createChatRoomTable];
+}
+
+-(void) removeCurrentView {
+    [self.currentViewController.view removeFromSuperview];
+    self.currentViewController = nil;
 }
 
 - (void) setChatRoomViewController {
+    [self removeCurrentView];
     ChatRoomTableViewController *chatRoom = [[ChatRoomTableViewController alloc] initWithNibName:[ChatRoomTableViewController className] bundle:nil];
     self.currentViewController = chatRoom;
     NSView *chatRoomView = chatRoom.view;
-    [self.window.contentView addSubview:chatRoomView];
+    [self.rightView addSubview:chatRoomView];
     [chatRoomView setTranslatesAutoresizingMaskIntoConstraints:NO];
     [NSLayoutConstraint activateConstraints:@[
-        [chatRoomView.leadingAnchor constraintEqualToAnchor:self.window.contentView.leadingAnchor],
-        [chatRoomView.trailingAnchor constraintEqualToAnchor:self.window.contentView.trailingAnchor],
-        [chatRoomView.topAnchor constraintEqualToAnchor:self.window.contentView.topAnchor],
-        [chatRoomView.bottomAnchor constraintEqualToAnchor:self.window.contentView.bottomAnchor],
+        [chatRoomView.leadingAnchor constraintEqualToAnchor:self.rightView.leadingAnchor],
+        [chatRoomView.trailingAnchor constraintEqualToAnchor:self.rightView.trailingAnchor],
+        [chatRoomView.topAnchor constraintEqualToAnchor:self.rightView.topAnchor],
+        [chatRoomView.bottomAnchor constraintEqualToAnchor:self.rightView.bottomAnchor],
     ]];
+}
+
+- (void) setFriendRoomViewController {
+    [self removeCurrentView];
+
+//    NSView *friendRoom = [[NSView alloc] initWithFrame:CGRectMake(0,0,300,600)];
+//    [self.rightView addSubview: friendRoom];
+////    [chatRoomView setTranslatesAutoresizingMaskIntoConstraints:NO];
+//    [NSLayoutConstraint activateConstraints:@[
+//        [friendRoom.leadingAnchor constraintEqualToAnchor:self.rightView.leadingAnchor],
+//        [friendRoom.trailingAnchor constraintEqualToAnchor:self.rightView.trailingAnchor],
+//        [friendRoom.topAnchor constraintEqualToAnchor:self.rightView.topAnchor],
+//        [friendRoom.bottomAnchor constraintEqualToAnchor:self.rightView.bottomAnchor],
+//    ]];
+}
+
+- (IBAction)showFriendRoom:(id)sender {
+    [self setFriendRoomViewController];
+}
+
+- (IBAction)showChatRoom:(id)sender {
+    [self setChatRoomViewController];
+}
+
+- (IBAction)addChatRoom:(id)sender {
+    ChatRoom *chatRoom = [[ChatRoom alloc] init];
+    chatRoom.chatRoomChat = @"오늘은 어떤가요?";
+    chatRoom.chatRoomTitle = @"백준";
+    [self.sqldb insertChatRoom:chatRoom];
+    [self updateChatRoomTableViewController];
+}
+
+-(void) updateChatRoomTableViewController {
+    if ([self.currentViewController isKindOfClass:[ChatRoomTableViewController class]]) {
+        [((ChatRoomTableViewController *)self.currentViewController) fetchChatRoom];
+    }
 }
 
 @end

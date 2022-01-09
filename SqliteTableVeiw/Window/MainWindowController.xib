@@ -8,6 +8,8 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="MainWindowController">
             <connections>
+                <outlet property="leftView" destination="Ic6-LF-8kn" id="KNl-KU-GCJ"/>
+                <outlet property="rightView" destination="BxZ-P6-R1T" id="U3b-Wb-7EC"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -18,14 +20,105 @@
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="480" height="270"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="775"/>
-            <view key="contentView" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
-                <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" misplaced="YES" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="482" height="390"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="Ic6-LF-8kn" userLabel="leftView">
+                        <rect key="frame" x="0.0" y="0.0" width="146" height="390"/>
+                        <subviews>
+                            <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="10" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E2a-PB-v9C">
+                                <rect key="frame" x="0.0" y="0.0" width="146" height="390"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="z7Y-ah-7as">
+                                        <rect key="frame" x="18" y="339" width="111" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="omq-sZ-wxe"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="smallSquare" title="showFriendRoom" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ef6-s0-czN">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="showFriendRoom:" target="-2" id="Qtq-eV-cNT"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="M8F-FT-b2t">
+                                        <rect key="frame" x="23" y="279" width="101" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="fBJ-0y-lKl"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="smallSquare" title="showChatRoom" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="JRY-lM-nU1">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="showChatRoom:" target="-2" id="biq-MO-DY5"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="836-c6-Uch">
+                                        <rect key="frame" x="25" y="219" width="97" height="52"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="gj1-9e-l6j"/>
+                                        </constraints>
+                                        <buttonCell key="cell" type="smallSquare" title="Add ChatRoom" bezelStyle="smallSquare" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bf1-Ug-WVp">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="addChatRoom:" target="-2" id="kFb-bB-fWe"/>
+                                        </connections>
+                                    </button>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="cIy-5S-xFO">
+                                        <rect key="frame" x="0.0" y="0.0" width="146" height="210"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="ULN-h2-hPp"/>
+                                        </constraints>
+                                    </customView>
+                                </subviews>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="E2a-PB-v9C" firstAttribute="top" secondItem="Ic6-LF-8kn" secondAttribute="top" id="8Uj-b5-OM1"/>
+                            <constraint firstItem="E2a-PB-v9C" firstAttribute="leading" secondItem="Ic6-LF-8kn" secondAttribute="leading" id="Czu-X3-lvj"/>
+                            <constraint firstAttribute="trailing" secondItem="E2a-PB-v9C" secondAttribute="trailing" id="Dhn-dp-o7v"/>
+                            <constraint firstAttribute="width" constant="146" id="Nhx-Tj-cNf"/>
+                            <constraint firstAttribute="bottom" secondItem="E2a-PB-v9C" secondAttribute="bottom" id="aKI-ZK-CKw"/>
+                        </constraints>
+                    </customView>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="BxZ-P6-R1T" userLabel="rightView">
+                        <rect key="frame" x="146" y="0.0" width="336" height="390"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="336" id="AGA-cX-h38"/>
+                        </constraints>
+                    </customView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ic6-LF-8kn" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="0XZ-65-ugW"/>
+                    <constraint firstItem="BxZ-P6-R1T" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="T6s-Ij-Ur7"/>
+                    <constraint firstItem="BxZ-P6-R1T" firstAttribute="leading" secondItem="Ic6-LF-8kn" secondAttribute="trailing" id="TWC-Y1-1sD"/>
+                    <constraint firstItem="Ic6-LF-8kn" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="dc4-18-RBk"/>
+                    <constraint firstAttribute="bottom" secondItem="BxZ-P6-R1T" secondAttribute="bottom" id="mVs-Sm-XA8"/>
+                    <constraint firstAttribute="trailing" secondItem="BxZ-P6-R1T" secondAttribute="trailing" id="ocK-cg-nod"/>
+                    <constraint firstAttribute="bottom" secondItem="Ic6-LF-8kn" secondAttribute="bottom" id="sps-wL-236"/>
+                </constraints>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="139" y="129"/>
+            <point key="canvasLocation" x="24" y="446"/>
         </window>
     </objects>
 </document>
