@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		55FDEC4D94FF08AC52E653C6 /* Pods_SqliteTableVeiw.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D664854BDA6F2A8DBA4AC1 /* Pods_SqliteTableVeiw.framework */; };
+		DB33EF6B278AA80500E04BCF /* ChatRoomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33EF69278AA80500E04BCF /* ChatRoomTableViewController.m */; };
+		DB33EF6C278AA80500E04BCF /* ChatRoomTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB33EF6A278AA80500E04BCF /* ChatRoomTableViewController.xib */; };
+		DB33EF70278AA86E00E04BCF /* ChatRoomTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = DB33EF6F278AA86E00E04BCF /* ChatRoomTableCellView.m */; };
 		DBF4D9302789AECC00EE891B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF4D92F2789AECC00EE891B /* AppDelegate.m */; };
 		DBF4D9322789AECC00EE891B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF4D9312789AECC00EE891B /* Assets.xcassets */; };
 		DBF4D9372789AECC00EE891B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF4D9362789AECC00EE891B /* main.m */; };
@@ -20,6 +23,11 @@
 		0C5662D703432A605DFBD8B1 /* Pods-SqliteTableVeiw.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SqliteTableVeiw.debug.xcconfig"; path = "Target Support Files/Pods-SqliteTableVeiw/Pods-SqliteTableVeiw.debug.xcconfig"; sourceTree = "<group>"; };
 		69FD6B18CD993EAF7E5E9B10 /* Pods-SqliteTableVeiw.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SqliteTableVeiw.release.xcconfig"; path = "Target Support Files/Pods-SqliteTableVeiw/Pods-SqliteTableVeiw.release.xcconfig"; sourceTree = "<group>"; };
 		96D664854BDA6F2A8DBA4AC1 /* Pods_SqliteTableVeiw.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SqliteTableVeiw.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB33EF68278AA80500E04BCF /* ChatRoomTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatRoomTableViewController.h; sourceTree = "<group>"; };
+		DB33EF69278AA80500E04BCF /* ChatRoomTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatRoomTableViewController.m; sourceTree = "<group>"; };
+		DB33EF6A278AA80500E04BCF /* ChatRoomTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatRoomTableViewController.xib; sourceTree = "<group>"; };
+		DB33EF6E278AA86E00E04BCF /* ChatRoomTableCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatRoomTableCellView.h; sourceTree = "<group>"; };
+		DB33EF6F278AA86E00E04BCF /* ChatRoomTableCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatRoomTableCellView.m; sourceTree = "<group>"; };
 		DBF4D92B2789AECC00EE891B /* SqliteTableVeiw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SqliteTableVeiw.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF4D92E2789AECC00EE891B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DBF4D92F2789AECC00EE891B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -61,6 +69,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DB33EF6D278AA85D00E04BCF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DB33EF6E278AA86E00E04BCF /* ChatRoomTableCellView.h */,
+				DB33EF6F278AA86E00E04BCF /* ChatRoomTableCellView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DBF4D9222789AECC00EE891B = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +99,7 @@
 		DBF4D92D2789AECC00EE891B /* SqliteTableVeiw */ = {
 			isa = PBXGroup;
 			children = (
+				DB33EF6D278AA85D00E04BCF /* View */,
 				DBF4D9452789BEB100EE891B /* MenuBarMenu */,
 				DBF4D93F2789BD5000EE891B /* ViewController */,
 				DBF4D93E2789BD4D00EE891B /* Window */,
@@ -107,6 +125,9 @@
 		DBF4D93F2789BD5000EE891B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DB33EF68278AA80500E04BCF /* ChatRoomTableViewController.h */,
+				DB33EF69278AA80500E04BCF /* ChatRoomTableViewController.m */,
+				DB33EF6A278AA80500E04BCF /* ChatRoomTableViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -178,6 +199,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB33EF6C278AA80500E04BCF /* ChatRoomTableViewController.xib in Resources */,
 				DBF4D9322789AECC00EE891B /* Assets.xcassets in Resources */,
 				DBF4D9442789BD6000EE891B /* MainWindowController.xib in Resources */,
 				DBF4D9472789BEE400EE891B /* MenuBar.xib in Resources */,
@@ -233,6 +255,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB33EF6B278AA80500E04BCF /* ChatRoomTableViewController.m in Sources */,
+				DB33EF70278AA86E00E04BCF /* ChatRoomTableCellView.m in Sources */,
 				DBF4D9432789BD6000EE891B /* MainWindowController.m in Sources */,
 				DBF4D9372789AECC00EE891B /* main.m in Sources */,
 				DBF4D9302789AECC00EE891B /* AppDelegate.m in Sources */,
