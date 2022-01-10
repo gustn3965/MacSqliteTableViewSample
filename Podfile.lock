@@ -1,22 +1,28 @@
 PODS:
-  - FMDB (2.7.5):
-    - FMDB/standard (= 2.7.5)
-  - FMDB/standard (2.7.5)
+  - FMDB/SQLCipher (2.6.2):
+    - SQLCipher
   - KVOController (1.2.0)
+  - SQLCipher (4.5.0):
+    - SQLCipher/standard (= 4.5.0)
+  - SQLCipher/common (4.5.0)
+  - SQLCipher/standard (4.5.0):
+    - SQLCipher/common
 
 DEPENDENCIES:
-  - FMDB
-  - KVOController
+  - FMDB/SQLCipher (= 2.6.2)
+  - KVOController (~> 1.2.0)
 
 SPEC REPOS:
   trunk:
     - FMDB
     - KVOController
+    - SQLCipher
 
 SPEC CHECKSUMS:
-  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   KVOController: d72ace34afea42468329623b3379ab3cd1d286b6
+  SQLCipher: 98dc22f27c0b1790d39e710d440f22a466ebdb59
 
-PODFILE CHECKSUM: 626f93e9522e6dbcc76d1eba33f8344d5929fd83
+PODFILE CHECKSUM: 5f2c1a916584490fdac09f4669e99fb3aed84029
 
 COCOAPODS: 1.11.2
