@@ -8,8 +8,9 @@
 #import "MainWindowController.h"
 #import "ChatRoomTableViewController.h"
 #import "SQLDB.h"
-
+#import "TopHeaderView.h"
 @interface MainWindowController ()
+@property (weak) IBOutlet TopHeaderView *topHeaderView;
 @property NSViewController * currentViewController;
 @property (weak) IBOutlet NSView *leftView;
 @property (weak) IBOutlet NSView *rightView;
@@ -32,6 +33,7 @@
 }
 
 - (void) setChatRoomViewController {
+    [self setupTopheaderView: @"채팅"];
     [self removeCurrentView];
     ChatRoomTableViewController *chatRoom = [[ChatRoomTableViewController alloc] initWithNibName:[ChatRoomTableViewController className] bundle:nil];
     self.currentViewController = chatRoom;
@@ -46,7 +48,22 @@
     ]];
 }
 
+- (void) setupTopheaderView: (NSString *) text {
+    self.topHeaderView.topTextLabel.stringValue = text;
+//    TopHeaderView *topHeader = [[TopHeaderView alloc] init];
+//
+//    [self.topHeaderView addSubview:topHeader];
+//    [topHeader setTranslatesAutoresizingMaskIntoConstraints:NO];
+//    [NSLayoutConstraint activateConstraints:@[
+//        [topHeader.leadingAnchor constraintEqualToAnchor:self.topHeaderView.leadingAnchor],
+//        [topHeader.trailingAnchor constraintEqualToAnchor:self.topHeaderView.trailingAnchor],
+//        [topHeader.topAnchor constraintEqualToAnchor:self.topHeaderView.topAnchor],
+//        [topHeader.bottomAnchor constraintEqualToAnchor:self.topHeaderView.bottomAnchor],
+//    ]];
+}
+
 - (void) setFriendRoomViewController {
+    [self setupTopheaderView: @"친구"];
     [self removeCurrentView];
 
 //    NSView *friendRoom = [[NSView alloc] initWithFrame:CGRectMake(0,0,300,600)];

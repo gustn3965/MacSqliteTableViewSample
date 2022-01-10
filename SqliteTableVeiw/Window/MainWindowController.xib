@@ -10,6 +10,7 @@
             <connections>
                 <outlet property="leftView" destination="Ic6-LF-8kn" id="KNl-KU-GCJ"/>
                 <outlet property="rightView" destination="BxZ-P6-R1T" id="U3b-Wb-7EC"/>
+                <outlet property="topHeaderView" destination="J8S-VH-81z" id="qh2-37-UdL"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -99,19 +100,28 @@
                         </constraints>
                     </customView>
                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="BxZ-P6-R1T" userLabel="rightView">
-                        <rect key="frame" x="146" y="0.0" width="336" height="390"/>
+                        <rect key="frame" x="146" y="0.0" width="336" height="329"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="336" id="AGA-cX-h38"/>
+                        </constraints>
+                    </customView>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="J8S-VH-81z" customClass="TopHeaderView">
+                        <rect key="frame" x="146" y="329" width="336" height="61"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="61" id="DDr-nS-Adb"/>
                         </constraints>
                     </customView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Ic6-LF-8kn" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="0XZ-65-ugW"/>
-                    <constraint firstItem="BxZ-P6-R1T" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="T6s-Ij-Ur7"/>
+                    <constraint firstItem="J8S-VH-81z" firstAttribute="leading" secondItem="Ic6-LF-8kn" secondAttribute="trailing" id="QTa-Ev-tvd"/>
                     <constraint firstItem="BxZ-P6-R1T" firstAttribute="leading" secondItem="Ic6-LF-8kn" secondAttribute="trailing" id="TWC-Y1-1sD"/>
+                    <constraint firstItem="BxZ-P6-R1T" firstAttribute="top" secondItem="J8S-VH-81z" secondAttribute="bottom" id="W4Y-cn-wtU"/>
                     <constraint firstItem="Ic6-LF-8kn" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="dc4-18-RBk"/>
+                    <constraint firstItem="J8S-VH-81z" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="lNz-Mj-Jgs"/>
                     <constraint firstAttribute="bottom" secondItem="BxZ-P6-R1T" secondAttribute="bottom" id="mVs-Sm-XA8"/>
                     <constraint firstAttribute="trailing" secondItem="BxZ-P6-R1T" secondAttribute="trailing" id="ocK-cg-nod"/>
+                    <constraint firstAttribute="trailing" secondItem="J8S-VH-81z" secondAttribute="trailing" id="ptE-Ty-9ro"/>
                     <constraint firstAttribute="bottom" secondItem="Ic6-LF-8kn" secondAttribute="bottom" id="sps-wL-236"/>
                 </constraints>
             </view>
