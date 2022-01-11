@@ -9,7 +9,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FriendListCellView : NSTableCellView
+@interface FriendListCellView : NSTableCellView <NSOutlineViewDataSource>
+@property (weak) IBOutlet NSImageView *profileImageView;
+@property (weak) IBOutlet NSTextField *nameLabel;
+@property (weak) IBOutlet NSTextField *stateLabel;
 
 @end
 

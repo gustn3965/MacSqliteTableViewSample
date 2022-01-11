@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19455" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19455"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -25,7 +25,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" rowHeight="24" rowSizeStyle="automatic" headerView="RfI-FM-f7x" viewBased="YES" indentationPerLevel="13" outlineTableColumn="l0o-iq-VmP" id="big-VF-U0A">
-                                <rect key="frame" x="0.0" y="0.0" width="304" height="570"/>
+                                <rect key="frame" x="0.0" y="0.0" width="305" height="570"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <size key="intercellSpacing" width="17" height="0.0"/>
                                 <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -43,23 +43,9 @@
                                         </textFieldCell>
                                         <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                         <prototypeCellViews>
-                                            <tableCellView id="SBx-Q0-zAT">
-                                                <rect key="frame" x="8" y="0.0" width="288" height="24"/>
+                                            <tableCellView id="SBx-Q0-zAT" customClass="FriendListCellView">
+                                                <rect key="frame" x="18" y="0.0" width="287" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                <subviews>
-                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kDs-mr-eo5">
-                                                        <rect key="frame" x="0.0" y="4" width="288" height="16"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                        <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="JcT-Pz-ggN">
-                                                            <font key="font" usesAppearanceFont="YES"/>
-                                                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                        </textFieldCell>
-                                                    </textField>
-                                                </subviews>
-                                                <connections>
-                                                    <outlet property="textField" destination="kDs-mr-eo5" id="mxL-hh-bgX"/>
-                                                </connections>
                                             </tableCellView>
                                         </prototypeCellViews>
                                     </tableColumn>
@@ -71,7 +57,7 @@
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="bl3-YZ-80B"/>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="600" id="kkx-L9-aGO"/>
                     </constraints>
-                    <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="QGd-rG-GyD">
+                    <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.9285714285714286" horizontal="YES" id="QGd-rG-GyD">
                         <rect key="frame" x="1" y="583" width="298" height="16"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
@@ -80,7 +66,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
                     <tableHeaderView key="headerView" wantsLayer="YES" id="RfI-FM-f7x">
-                        <rect key="frame" x="0.0" y="0.0" width="304" height="28"/>
+                        <rect key="frame" x="0.0" y="0.0" width="305" height="28"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </tableHeaderView>
                 </scrollView>
